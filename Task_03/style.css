@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(33, 26, 61);
+    padding: 20px;
+    margin: 20px;
+    padding-left: 500px;
+}
+.container{
+    height: 70px;
+    width: 500px;
+    background-color: white;
+    padding: 5px;
+    padding-top: 30px;
+    text-align: center;
+}
+.text{
+    font-size: 25px;
+    border: 2px solid rgb(18, 17, 17);
+    border-radius: 5px;
+}
+.text:hover{
+    border-color: rgb(10, 228, 10);
+}
+#push{
+    height: 30px;
+    width: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(52, 218, 52);
+    cursor: pointer;
+}
+#push:hover{
+    color: white;
+}
+#tasks{
+    background-color: white;
+    font-size: 25px;
+    font-weight: 300;
+    width: 510px;
+    height: auto;
+}
+.delete{
+    font-size: 15px;
+    color: white;
+    background-color: rgb(207, 33, 13);
+}

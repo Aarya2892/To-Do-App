@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic To Do Webapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="text" placeholder="Enter the item list">
+        <button id="push"> Add</button>
+    </div><br>
+    <div id="tasks"></div>
+
+<script>
+    document.querySelector("#push").onclick=
+    function(){
+     if(document.querySelector(".container input").value.length==0){
+        alert("Enter item name")
+     }else{
+        document.querySelector("#tasks").innerHTML
+        +=`
+         <div class="task">
+         <span id="taskname">${document.querySelector(".container input").value}</span>
+         <button class="delete">Delete</button>
+         </div>
+        `;
+        let current_tasks = document.querySelectorAll(".delete");
+        for(let i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick= 
+            function(){
+                this.parentNode.remove();
+            }
+        }
+        let tasks =document.querySelectorAll("taskname");
+        for(let i=0; i<tasks.length ;i++){
+            tasks[i].onclick = function(){
+                this.classList.toggle("completed");
+            }
+        }
+        document.querySelector(".container input"). value = "";
+     }
+    }
+</script>
+</body>
+</html> 
